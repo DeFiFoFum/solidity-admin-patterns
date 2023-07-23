@@ -48,7 +48,7 @@ contract ProxyAdminRoleBased is ProxyAdmin, AccessControlEnumerable {
     }
 
     /**
-     * UPGRADE_ROLE functions
+     * Owner + UPGRADE_ROLE functions
      */
 
     /**
@@ -71,7 +71,7 @@ contract ProxyAdminRoleBased is ProxyAdmin, AccessControlEnumerable {
      *
      * Requirements:
      *
-     * - This contract must have the `UPGRADE_ROLE`.
+     * - This contract must be the admin of `proxy`.
      */
     function upgradeAndCall(
         ITransparentUpgradeableProxy proxy,
